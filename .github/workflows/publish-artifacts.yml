@@ -1,7 +1,11 @@
 name: Publish package to GitHub Packages
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -18,7 +22,7 @@ jobs:
         uses: s4u/maven-settings-action@v3.0.0
         with:
           servers: '[{"id": "github", "username": "dummy", "password": "${GITHUB_TOKEN_REF}"}]'
-          githubServer: false
+          githubServer: true
       - name: Publish package
         run: mvn --batch-mode deploy
         env:
