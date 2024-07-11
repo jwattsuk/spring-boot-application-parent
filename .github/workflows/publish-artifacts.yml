@@ -52,7 +52,7 @@ jobs:
                     <server>
                     <id>github</id>
                     <username>jwattsuk</username>
-                    <password>${secrets.GH_PAT_FOR_ACTIONS_TOKEN}</password>
+                    <password>${GITHUB_TOKEN_REF}</password>
                     </server>
                     </servers>
                     </settings>" > /home/runner/.m2/settings.xml
