@@ -16,8 +16,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Print settings xml 1
-        run: cat /home/runner/.m2/settings.xml
+      - name: Print credential
+        run: echo ${GITHUB_TOKEN_REF}
 
       - name: maven-settings
         #uses: s4u/maven-settings-action@v3.0.0
