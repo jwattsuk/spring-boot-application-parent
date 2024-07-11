@@ -39,7 +39,7 @@ jobs:
                     </repository>
                     <repository>
                       <id>github</id>
-                      <url>https://maven.pkg.github.com/jwattsuk</url>
+                      <url>https://maven.pkg.github.com/jwattsuk/REPOSITORY</url>
                       <snapshots>
                         <enabled>true</enabled>
                       </snapshots>
@@ -58,7 +58,7 @@ jobs:
                     </settings>" > /home/runner/.m2/settings.xml
         env:
           GITHUB_TOKEN_REF: ${{ secrets.GH_PAT_FOR_ACTIONS_TOKEN }}
-          
+
       - name: Print settings xml
         run: cat /home/runner/.m2/settings.xml
 
