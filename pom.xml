@@ -11,7 +11,7 @@
 	</parent>
 
 	<artifactId>spring-boot-application-parent</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.9</version>
 	<packaging>pom</packaging>
 	<name>spring-boot-application-parent</name>
 	<description>Parent POM for Spring Boot Applications</description>
